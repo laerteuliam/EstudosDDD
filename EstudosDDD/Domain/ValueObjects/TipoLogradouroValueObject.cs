@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EstudosDDD.Domain.ValueObjects
 {
-    public enum TipoLogradouroVO
+    public enum TipoLogradouroValueObject
     {
         Avenida,
         Estrada,
