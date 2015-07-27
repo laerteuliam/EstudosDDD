@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contracts\Repositories\Core\IRepositoryAdd.cs" />
+    <Compile Include="Contracts\Repositories\Core\IRepositoryGetAll.cs" />
     <Compile Include="Contracts\Repositories\Core\IRepositoryGetById.cs" />
     <Compile Include="Entities\CidadeEntity.cs" />
     <Compile Include="Entities\Core\Entity.cs" />
