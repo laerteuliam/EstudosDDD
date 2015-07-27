@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - UI", "1 - UI", "{2C2A2832-B7C2-4FE9-968E-199746B586BB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - API", "2 - API", "{E54B25C2-E2E6-41CC-BE77-E2E74AD47ECF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Application", "3 - Application", "{4EC9552B-140D-4E3D-84C0-DA2A2ADDFF4C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Domain", "4 - Domain", "{E7630F9D-018C-4017-9FE2-A622CA122616}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Infra", "5 - Infra", "{A4CBA546-E34B-4044-80D4-7FCDA47B7A9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{30192007-50BD-4809-95D1-0527B0EC91E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30192007-50BD-4809-95D1-0527B0EC91E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30192007-50BD-4809-95D1-0527B0EC91E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30192007-50BD-4809-95D1-0527B0EC91E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30192007-50BD-4809-95D1-0527B0EC91E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{30192007-50BD-4809-95D1-0527B0EC91E4} = {E7630F9D-018C-4017-9FE2-A622CA122616}
+	EndGlobalSection
+EndGlobal
