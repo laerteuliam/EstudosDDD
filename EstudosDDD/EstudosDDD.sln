@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - UI", "1 - UI", "{2C2A2832-B7C2-4FE9-968E-199746B586BB}"
 EndProject
@@ -30,6 +30,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6FE60F
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{55C921A9-112B-4196-AEA5-B356C4070A76}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +50,10 @@ Global
 		{EAAA285D-D741-4490-B050-8CC506A1070A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAAA285D-D741-4490-B050-8CC506A1070A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAAA285D-D741-4490-B050-8CC506A1070A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55C921A9-112B-4196-AEA5-B356C4070A76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55C921A9-112B-4196-AEA5-B356C4070A76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55C921A9-112B-4196-AEA5-B356C4070A76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55C921A9-112B-4196-AEA5-B356C4070A76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,5 +64,6 @@ Global
 		{03A9C10F-33CF-4109-8FC8-0C987FDFE52D} = {A4CBA546-E34B-4044-80D4-7FCDA47B7A9E}
 		{F504F128-296E-4797-B200-9F338957AB01} = {A4CBA546-E34B-4044-80D4-7FCDA47B7A9E}
 		{EAAA285D-D741-4490-B050-8CC506A1070A} = {F504F128-296E-4797-B200-9F338957AB01}
+		{55C921A9-112B-4196-AEA5-B356C4070A76} = {03A9C10F-33CF-4109-8FC8-0C987FDFE52D}
 	EndGlobalSection
 EndGlobal

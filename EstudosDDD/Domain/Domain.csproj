@@ -45,7 +45,11 @@
     <Compile Include="Contracts\Repositories\Core\IRepositoryGetAll.cs" />
     <Compile Include="Contracts\Repositories\Core\IRepositoryGetById.cs" />
     <Compile Include="Contracts\Repositories\Core\IRepositoryUpdate.cs" />
+    <Compile Include="Contracts\Repositories\IRepositoryLogin.cs" />
     <Compile Include="Contracts\Repositories\IRepositoryPessoa.cs" />
+    <Compile Include="Contracts\Services\Core\IDomainServiceCadastrar.cs" />
+    <Compile Include="Contracts\Services\Core\IDomainServiceListar.cs" />
+    <Compile Include="Contracts\Services\IPessoaDomainService.cs" />
     <Compile Include="Entities\CidadeEntity.cs" />
     <Compile Include="Entities\Core\Entity.cs" />
     <Compile Include="Entities\EnderecoEntity.cs" />
