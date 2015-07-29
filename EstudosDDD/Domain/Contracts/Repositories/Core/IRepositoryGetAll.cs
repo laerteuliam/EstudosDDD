@@ -2,7 +2,7 @@
 
 namespace EstudosDDD.Domain.Contracts.Repositories.Core
 {
-    public interface IRepositoryGetAll<in TCodigo, out TEntity>
+    public interface IRepositoryGetAll<TEntity,TCodigo>
         where TEntity : Entities.Core.Entity<TCodigo>
     {
         IEnumerable<TEntity> GetAll();

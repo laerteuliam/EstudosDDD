@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - UI", "1 - UI", "{2C2A2832-B7C2-4FE9-968E-199746B586BB}"
 EndProject
@@ -15,6 +15,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Infra", "5 - Infra", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{30192007-50BD-4809-95D1-0527B0EC91E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Tests", "Domain.Tests\Domain.Tests.csproj", "{C3557169-3DA3-4A47-8EF1-204BADD45010}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.1 Data", "5.1 Data", "{03A9C10F-33CF-4109-8FC8-0C987FDFE52D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.2 CrossCutting", "5.2 CrossCutting", "{F504F128-296E-4797-B200-9F338957AB01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossCutting", "CrossCutting\CrossCutting.csproj", "{EAAA285D-D741-4490-B050-8CC506A1070A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6FE60FAD-74BC-4BD7-B9DB-9A93D75C57BF}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,11 +40,23 @@ Global
 		{30192007-50BD-4809-95D1-0527B0EC91E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30192007-50BD-4809-95D1-0527B0EC91E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30192007-50BD-4809-95D1-0527B0EC91E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3557169-3DA3-4A47-8EF1-204BADD45010}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3557169-3DA3-4A47-8EF1-204BADD45010}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3557169-3DA3-4A47-8EF1-204BADD45010}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3557169-3DA3-4A47-8EF1-204BADD45010}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAAA285D-D741-4490-B050-8CC506A1070A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAAA285D-D741-4490-B050-8CC506A1070A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAAA285D-D741-4490-B050-8CC506A1070A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAAA285D-D741-4490-B050-8CC506A1070A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{30192007-50BD-4809-95D1-0527B0EC91E4} = {E7630F9D-018C-4017-9FE2-A622CA122616}
+		{C3557169-3DA3-4A47-8EF1-204BADD45010} = {E7630F9D-018C-4017-9FE2-A622CA122616}
+		{03A9C10F-33CF-4109-8FC8-0C987FDFE52D} = {A4CBA546-E34B-4044-80D4-7FCDA47B7A9E}
+		{F504F128-296E-4797-B200-9F338957AB01} = {A4CBA546-E34B-4044-80D4-7FCDA47B7A9E}
+		{EAAA285D-D741-4490-B050-8CC506A1070A} = {F504F128-296E-4797-B200-9F338957AB01}
 	EndGlobalSection
 EndGlobal

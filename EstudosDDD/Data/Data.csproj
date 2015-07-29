@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{30192007-50BD-4809-95D1-0527B0EC91E4}</ProjectGuid>
+    <ProjectGuid>{4D86CBD4-2C56-4A17-8ADF-196D98B21956}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EstudosDDD.Domain</RootNamespace>
-    <AssemblyName>EstudosDDD.Domain</AssemblyName>
+    <RootNamespace>Data</RootNamespace>
+    <AssemblyName>Data</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,31 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contracts\Repositories\Core\IRepositoryAdd.cs" />
-    <Compile Include="Contracts\Repositories\Core\IRepositoryDelete.cs" />
-    <Compile Include="Contracts\Repositories\Core\IRepositoryGetAll.cs" />
-    <Compile Include="Contracts\Repositories\Core\IRepositoryGetById.cs" />
-    <Compile Include="Contracts\Repositories\Core\IRepositoryUpdate.cs" />
-    <Compile Include="Contracts\Repositories\IRepositoryPessoa.cs" />
-    <Compile Include="Entities\CidadeEntity.cs" />
-    <Compile Include="Entities\Core\Entity.cs" />
-    <Compile Include="Entities\EnderecoEntity.cs" />
-    <Compile Include="Entities\EstadoEntity.cs" />
-    <Compile Include="Entities\LoginEntity.cs" />
-    <Compile Include="Entities\PessoaEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ValueObjects\TipoLogradouroValueObject.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Collections\" />
-    <Folder Include="Factories\" />
-    <Folder Include="Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CrossCutting\CrossCutting.csproj">
-      <Project>{eaaa285d-d741-4490-b050-8cc506a1070a}</Project>
-      <Name>CrossCutting</Name>
-    </ProjectReference>
+    <Folder Include="Contexts\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
