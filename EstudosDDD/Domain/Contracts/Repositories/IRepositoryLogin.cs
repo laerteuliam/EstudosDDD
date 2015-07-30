@@ -5,6 +5,6 @@ namespace EstudosDDD.Domain.Contracts.Repositories
     public interface IRepositoryLogin : 
         Core.IRepositoryAdd<LoginEntity,int>
     {
-        void GetByLoginSenha(string login, string senha);
+        LoginEntity GetByLoginSenha(string login, string senha);
     }
 }

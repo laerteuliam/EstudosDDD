@@ -3,6 +3,6 @@
     public interface IRepositoryAdd<TEntity,TCodigo>
         where TEntity: Entities.Core.Entity<TCodigo>
     {
-        TCodigo Add(TEntity entity);
+        void Add(TEntity entity);
     }
 }

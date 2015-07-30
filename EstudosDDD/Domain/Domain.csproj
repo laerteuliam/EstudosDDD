@@ -49,6 +49,7 @@
     <Compile Include="Contracts\Repositories\IRepositoryPessoa.cs" />
     <Compile Include="Contracts\Services\Core\IDomainServiceCadastrar.cs" />
     <Compile Include="Contracts\Services\Core\IDomainServiceListar.cs" />
+    <Compile Include="Contracts\Services\ILoginDomainService.cs" />
     <Compile Include="Contracts\Services\IPessoaDomainService.cs" />
     <Compile Include="Entities\CidadeEntity.cs" />
     <Compile Include="Entities\Core\Entity.cs" />
@@ -57,12 +58,13 @@
     <Compile Include="Entities\LoginEntity.cs" />
     <Compile Include="Entities\PessoaEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\LoginDomainService.cs" />
+    <Compile Include="Services\PessoaDomainService.cs" />
     <Compile Include="ValueObjects\TipoLogradouroValueObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Collections\" />
     <Folder Include="Factories\" />
-    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CrossCutting\CrossCutting.csproj">

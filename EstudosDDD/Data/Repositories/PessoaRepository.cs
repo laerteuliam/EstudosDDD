@@ -16,13 +16,10 @@ namespace EstudosDDD.Data.Repositories
             _context = context;
         }
 
-        public int Add(PessoaEntity entity)
+        public void Add(PessoaEntity entity)
         {
             _context.LoginEntities.Add(entity.Login);
-            int CodigoLogin = _context.SaveChanges();
-            entity.CodigoLogin = CodigoLogin;
-            _context.PessoaEntities.Add(entity);
-            return _context.SaveChanges();
+
         }
 
         public IEnumerable<PessoaEntity> GetAll()
