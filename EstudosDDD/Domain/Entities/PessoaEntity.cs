@@ -16,7 +16,7 @@ namespace EstudosDDD.Domain.Entities
         public string Nome { get; set; }
         public string SobreNome { get; set; }
         public DateTime DataNascimento { get; set; }
-        public int CodigoEndereco { get; set; }
+        public Nullable<int> CodigoEndereco { get; set; }
         public EnderecoEntity Endereco { get; set; }
     }
 }

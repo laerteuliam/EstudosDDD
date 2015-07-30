@@ -10,6 +10,7 @@ namespace EstudosDDD.Domain.Entities
         public string Complemento { get; set; }
         public string Numero { get; set; }
         public string CEP { get; set; }
+        public int CodigoCidade { get; set; }
         public CidadeEntity Cidade { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace EstudosDDD.Data.Mappings
         public CidadeMap()
         {
             HasKey(x => x.Codigo);
+            HasRequired(x => x.Estado).WithMany().HasForeignKey(x => x.CodigoEstado);
         }
-
     }
 }

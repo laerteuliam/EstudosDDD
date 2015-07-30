@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity.ModelConfiguration;
 using EstudosDDD.Domain.Entities;
 
 namespace EstudosDDD.Data.Mappings
@@ -18,7 +13,7 @@ namespace EstudosDDD.Data.Mappings
 
             Property(x => x.Login)
                 .HasColumnName("Login")
-                .HasColumnType("vachar")
+                .HasColumnType("varchar")
                 .HasMaxLength(20);
 
             Property(x => x.Senha)

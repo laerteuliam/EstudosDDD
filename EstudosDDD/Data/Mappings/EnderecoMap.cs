@@ -10,6 +10,8 @@ namespace EstudosDDD.Data.Mappings
         {
             ToTable("Endereco");
             HasKey(x => x.Codigo);
+
+            HasRequired(x => x.Cidade).WithMany().HasForeignKey(x => x.CodigoCidade);
         }
     }
 }

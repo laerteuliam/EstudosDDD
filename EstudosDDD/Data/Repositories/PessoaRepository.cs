@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using EstudosDDD.Data.Contexts;
+using EstudosDDD.Domain.Contracts.Repositories;
 using EstudosDDD.Domain.Entities;
 
 namespace EstudosDDD.Data.Repositories
 {
-    public sealed class PessoaRepository : Domain.Contracts.Repositories.IRepositoryPessoa
+    public sealed class PessoaRepository : IRepositoryPessoa
     {
         private readonly EstudosDDDContext _context;
 
