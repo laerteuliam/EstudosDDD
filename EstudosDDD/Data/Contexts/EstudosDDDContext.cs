@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using EstudosDDD.Data.Mappings;
 
 namespace EstudosDDD.Data.Contexts
 {
@@ -19,11 +21,17 @@ namespace EstudosDDD.Data.Contexts
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             #region Convenções
-            
+            modelBuilder.Conventions.Remove<System.Data.Entity.ModelConfiguration.Conventions.PluralizingTableNameConvention>();
+            modelBuilder.Conventions.Remove<System.Data.Entity.ModelConfiguration.Conventions.OneToManyCascadeDeleteConvention>();
+            modelBuilder.Conventions.Remove<System.Data.Entity.ModelConfiguration.Conventions.ManyToManyCascadeDeleteConvention>();
             #endregion
 
             #region Configurações
-
+            modelBuilder.Configurations.Add(new PessoaMap());
+            modelBuilder.Configurations.Add(new LoginMap());
+            modelBuilder.Configurations.Add(new EnderecoMap());
+            modelBuilder.Configurations.Add(new CidadeMap());
+            modelBuilder.Configurations.Add(new EstadoMap());
             #endregion
 
             base.OnModelCreating(modelBuilder);

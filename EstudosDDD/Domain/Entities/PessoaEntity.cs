@@ -11,10 +11,12 @@ namespace EstudosDDD.Domain.Entities
             SobreNome = sobrenome;
         }
 
+        public int CodigoLogin { get; set; }
         public LoginEntity Login { get; set; }
         public string Nome { get; set; }
         public string SobreNome { get; set; }
         public DateTime DataNascimento { get; set; }
+        public int CodigoEndereco { get; set; }
         public EnderecoEntity Endereco { get; set; }
     }
 }
