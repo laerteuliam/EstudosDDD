@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using EstudosDDD.Data.Contexts;
 using EstudosDDD.Domain.Contracts.Repositories;
 using EstudosDDD.Domain.Entities;
@@ -17,12 +18,16 @@ namespace EstudosDDD.Data.Repositories
 
         public int Add(PessoaEntity entity)
         {
-            throw new NotImplementedException();
+            _context.LoginEntities.Add(entity.Login);
+            int CodigoLogin = _context.SaveChanges();
+            entity.CodigoLogin = CodigoLogin;
+            _context.PessoaEntities.Add(entity);
+            return _context.SaveChanges();
         }
 
         public IEnumerable<PessoaEntity> GetAll()
         {
-            throw new NotImplementedException();
+            return _context.PessoaEntities.ToList();
         }
     }
 }
