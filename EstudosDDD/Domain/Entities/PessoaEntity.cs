@@ -4,6 +4,11 @@ namespace EstudosDDD.Domain.Entities
 {
     public sealed class PessoaEntity : Core.Entity<int>
     {
+        public PessoaEntity()
+        {
+            
+        }
+
         public PessoaEntity(string nome, string sobrenome, LoginEntity login)
         {
             Login = login;

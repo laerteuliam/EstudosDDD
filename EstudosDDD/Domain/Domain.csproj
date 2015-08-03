@@ -51,6 +51,8 @@
     <Compile Include="Contracts\Services\Core\IDomainServiceListar.cs" />
     <Compile Include="Contracts\Services\ILoginDomainService.cs" />
     <Compile Include="Contracts\Services\IPessoaDomainService.cs" />
+    <Compile Include="Contracts\UnitOfWork\Core\IUnityOfWork.cs" />
+    <Compile Include="Contracts\UnitOfWork\IEstudosDDDUnityOfWork.cs" />
     <Compile Include="Entities\CidadeEntity.cs" />
     <Compile Include="Entities\Core\Entity.cs" />
     <Compile Include="Entities\EnderecoEntity.cs" />
