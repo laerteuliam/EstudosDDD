@@ -3,20 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EstudosDDD.Domain.Contracts.Repositories;
 using EstudosDDD.Domain.Contracts.Services;
 
 namespace EstudosDDD.Domain.Services
 {
     public sealed class PessoaDomainService : IPessoaDomainService
     {
-        public int Cadastrar(Entities.PessoaEntity t)
+        private readonly IRepositoryPessoa _repositoryPessoa;
+
+        public PessoaDomainService(IRepositoryPessoa repositoryPessoa)
         {
-            throw new NotImplementedException();
+            _repositoryPessoa = repositoryPessoa;
+        }
+
+        public void Cadastrar(Entities.PessoaEntity entity)
+        {
+            _repositoryPessoa.Add(entity);
         }
 
         public IEnumerable<Entities.PessoaEntity> Listar()
         {
-            throw new NotImplementedException();
+            return _repositoryPessoa.GetAll();
         }
     }
 }

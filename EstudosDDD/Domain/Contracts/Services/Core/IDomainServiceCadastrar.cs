@@ -3,6 +3,6 @@
     public interface IDomainServiceCadastrar<TEntity,TCodigo>
         where TEntity : Entities.Core.Entity<TCodigo>
     {
-        TCodigo Cadastrar(TEntity t);
+        void Cadastrar(TEntity t);
     }
 }
