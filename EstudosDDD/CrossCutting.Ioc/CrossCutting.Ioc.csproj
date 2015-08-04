@@ -58,6 +58,7 @@
     <Compile Include="Containers\DomainServiceContainer.cs" />
     <Compile Include="Containers\ApplicationServiceContainer.cs" />
     <Compile Include="Containers\DbContextContainer.cs" />
+    <Compile Include="Containers\RepositoryContainer.cs" />
     <Compile Include="Extensions\ContainerExtension.cs" />
     <Compile Include="IocStartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -15,6 +15,7 @@ namespace CrossCutting.Ioc
             container.RegisterApplicationService();
             container.RegisterDbContext();
             container.RegisterDomainService();
+            container.RegisterRepository();
         }
     }
 }
