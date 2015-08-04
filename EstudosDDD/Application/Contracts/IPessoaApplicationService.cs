@@ -7,7 +7,7 @@ using EstudosDDD.Application.Dtos;
 
 namespace EstudosDDD.Application.Contracts
 {
-    interface IPessoaApplicationService
+    public interface IPessoaApplicationService
     {
         void Cadastrar(PessoaDto pessoaDto);
         IEnumerable<PessoaDto> Listar();

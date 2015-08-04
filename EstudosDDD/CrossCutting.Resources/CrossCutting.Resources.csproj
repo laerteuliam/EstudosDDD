@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{30192007-50BD-4809-95D1-0527B0EC91E4}</ProjectGuid>
+    <ProjectGuid>{39BBDA0E-ED88-4FD4-8378-101C8023E66F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EstudosDDD.Domain</RootNamespace>
-    <AssemblyName>EstudosDDD.Domain</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <RootNamespace>EstudosDDD.CrossCutting.Resources</RootNamespace>
+    <AssemblyName>EstudosDDD.CrossCutting.Resources</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,39 +39,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contracts\Repositories\Core\IRepositoryAdd.cs" />
-    <Compile Include="Contracts\Repositories\Core\IRepositoryDelete.cs" />
-    <Compile Include="Contracts\Repositories\Core\IRepositoryGetAll.cs" />
-    <Compile Include="Contracts\Repositories\Core\IRepositoryGetById.cs" />
-    <Compile Include="Contracts\Repositories\Core\IRepositoryUpdate.cs" />
-    <Compile Include="Contracts\Repositories\IRepositoryLogin.cs" />
-    <Compile Include="Contracts\Repositories\IRepositoryPessoa.cs" />
-    <Compile Include="Contracts\Services\Core\IDomainServiceCadastrar.cs" />
-    <Compile Include="Contracts\Services\Core\IDomainServiceListar.cs" />
-    <Compile Include="Contracts\Services\ILoginDomainService.cs" />
-    <Compile Include="Contracts\Services\IPessoaDomainService.cs" />
-    <Compile Include="Contracts\UnitOfWork\Core\IUnityOfWork.cs" />
-    <Compile Include="Contracts\UnitOfWork\IEstudosDDDUnityOfWork.cs" />
-    <Compile Include="Entities\CidadeEntity.cs" />
-    <Compile Include="Entities\Core\Entity.cs" />
-    <Compile Include="Entities\EnderecoEntity.cs" />
-    <Compile Include="Entities\EstadoEntity.cs" />
-    <Compile Include="Entities\LoginEntity.cs" />
-    <Compile Include="Entities\PessoaEntity.cs" />
+    <Compile Include="Messages.Designer.cs">
+      <DependentUpon>Messages.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\LoginDomainService.cs" />
-    <Compile Include="Services\PessoaDomainService.cs" />
-    <Compile Include="ValueObjects\TipoLogradouroValueObject.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Collections\" />
-    <Folder Include="Factories\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CrossCutting.Resources\CrossCutting.Resources.csproj">
-      <Project>{39bbda0e-ed88-4fd4-8378-101c8023e66f}</Project>
-      <Name>CrossCutting.Resources</Name>
-    </ProjectReference>
+    <EmbeddedResource Include="Messages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

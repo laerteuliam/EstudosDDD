@@ -4,7 +4,7 @@ using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
-using EstudosDDD.CrossCutting;
+using EstudosDDD.CrossCutting.Resources;
 
 namespace EstudosDDD.Domain.Entities
 {
