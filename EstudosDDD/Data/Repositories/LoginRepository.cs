@@ -10,9 +10,9 @@ namespace EstudosDDD.Data.Repositories
 {
     public sealed class LoginRepository : IRepositoryLogin
     {
-        private readonly EstudosDDDContext _context;
+        private readonly EstudosDbContext _context;
 
-        public LoginRepository(EstudosDDDContext context)
+        public LoginRepository(EstudosDbContext context)
         {
             _context = context;
         }

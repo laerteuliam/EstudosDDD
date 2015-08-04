@@ -13,7 +13,7 @@ namespace CrossCutting.Ioc.Containers
     {
         public static void RegisterDbContext(this Container container)
         {
-            container.BatchRegister<EstudosDDDContext>();
+            container.BatchRegister<EstudosDbContext>();
         }
     }
 }

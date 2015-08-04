@@ -3,14 +3,14 @@ using EstudosDDD.Data.Contexts;
 
 namespace EstudosDDD.Data.Migrations
 {
-    internal sealed class Configuration : DbMigrationsConfiguration<EstudosDDDContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<EstudosDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(EstudosDDDContext context)
+        protected override void Seed(EstudosDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

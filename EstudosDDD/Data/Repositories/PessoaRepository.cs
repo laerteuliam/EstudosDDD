@@ -9,9 +9,9 @@ namespace EstudosDDD.Data.Repositories
 {
     public sealed class PessoaRepository : IRepositoryPessoa
     {
-        private readonly EstudosDDDContext _context;
+        private readonly EstudosDbContext _context;
 
-        public PessoaRepository(EstudosDDDContext context)
+        public PessoaRepository(EstudosDbContext context)
         {
             _context = context;
         }

@@ -5,9 +5,9 @@ using EstudosDDD.Domain.Entities;
 
 namespace EstudosDDD.Data.Contexts
 {
-    public sealed class EstudosDDDContext : DbContext
+    public sealed class EstudosDbContext : DbContext
     {
-        public EstudosDDDContext()
+        public EstudosDbContext()
             : base(@"Data Source=(localdb)\ProjectsV12;Initial Catalog=EstudosDDD;Integrated Security=true")
         {
         }
