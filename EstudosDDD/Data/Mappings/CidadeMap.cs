@@ -8,6 +8,7 @@ namespace EstudosDDD.Data.Mappings
     {
         public CidadeMap()
         {
+            ToTable("Cidade");
             HasKey(x => x.Codigo);
             HasRequired(x => x.Estado).WithMany().HasForeignKey(x => x.CodigoEstado);
         }

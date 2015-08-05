@@ -6,26 +6,22 @@ using System.Text;
 using System.Threading.Tasks;
 using EstudosDDD.Data.Contexts;
 using EstudosDDD.Domain.Contracts.UnitOfWork;
+using Microsoft.Practices.ServiceLocation;
 
 namespace EstudosDDD.Data.UnityOfWork
 {
     public sealed class EstudosDDDUnityOfWork : IEstudosDDDUnityOfWork
     {
-        private readonly EstudosDbContext _context;
+        private EstudosDbContext _context;
         
-        public EstudosDDDUnityOfWork()
-        {
-           
-        }
-
         public void Begin()
         {
-            throw new NotImplementedException();
+            _context = ServiceLocator.Current.GetInstance<EstudosDbContext>();
         }
 
         public void SaveChanges()
         {
-            throw new NotImplementedException();
+            _context.SaveChanges();
         }
     }
 }

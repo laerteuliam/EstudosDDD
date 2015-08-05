@@ -8,6 +8,7 @@ namespace EstudosDDD.Data.Mappings
     {
         public EstadoMap()
         {
+            ToTable("Estado");
             HasKey(x => x.Codigo);
         }
     }

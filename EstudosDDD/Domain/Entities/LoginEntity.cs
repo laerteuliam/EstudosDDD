@@ -10,10 +10,11 @@ namespace EstudosDDD.Domain.Entities
 {
     public sealed class LoginEntity : Core.Entity<int>
     {
-        public LoginEntity()
+        private LoginEntity()
         {
             
         }
+
         public LoginEntity(string login, string senha)
         {
             if(senha.Length<6)

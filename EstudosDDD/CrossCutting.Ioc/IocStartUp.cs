@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CrossCutting.Ioc.Containers;
+﻿using CrossCutting.Ioc.Containers;
 using SimpleInjector;
 
 namespace CrossCutting.Ioc
@@ -16,6 +11,7 @@ namespace CrossCutting.Ioc
             container.RegisterDbContext();
             container.RegisterDomainService();
             container.RegisterRepository();
+            container.RegisterUnityOfWork();
         }
     }
 }

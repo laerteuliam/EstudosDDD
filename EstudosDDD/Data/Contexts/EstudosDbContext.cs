@@ -28,7 +28,7 @@ namespace EstudosDDD.Data.Contexts
 
             #endregion
 
-            #region Configurações
+            #region Mappings
 
             modelBuilder.Configurations.Add(new PessoaMap());
             modelBuilder.Configurations.Add(new LoginMap());

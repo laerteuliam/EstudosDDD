@@ -28,10 +28,6 @@ namespace EstudosDDD.Data.Mappings
             HasRequired(x => x.Login)
                 .WithMany()
                 .HasForeignKey(x => x.CodigoLogin);
-
-            HasOptional(x => x.Endereco)
-                .WithMany()
-                .HasForeignKey(x => x.CodigoEndereco);
         }
     }
 }

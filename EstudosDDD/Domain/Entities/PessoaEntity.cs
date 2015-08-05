@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace EstudosDDD.Domain.Entities
 {
@@ -9,11 +10,13 @@ namespace EstudosDDD.Domain.Entities
             
         }
 
-        public PessoaEntity(string nome, string sobrenome, LoginEntity login)
+        public PessoaEntity(string nome, string sobrenome, DateTime dataNascimento, LoginEntity loginEntity)
         {
-            Login = login;
+            Login = loginEntity;
             Nome = nome;
             SobreNome = sobrenome;
+            CodigoLogin = loginEntity.Codigo;
+            DataNascimento = dataNascimento;
         }
 
         public int CodigoLogin { get; set; }
@@ -21,7 +24,5 @@ namespace EstudosDDD.Domain.Entities
         public string Nome { get; set; }
         public string SobreNome { get; set; }
         public DateTime DataNascimento { get; set; }
-        public Nullable<int> CodigoEndereco { get; set; }
-        public EnderecoEntity Endereco { get; set; }
     }
 }

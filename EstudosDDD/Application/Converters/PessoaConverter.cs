@@ -14,7 +14,6 @@ namespace EstudosDDD.Application.Converters
         {
             PessoaDto pessoaDto = new PessoaDto()
             {
-                CodigoEndereco = pessoaEntity.CodigoEndereco,
                 CodigoLogin = pessoaEntity.CodigoLogin,
                 DataNascimento = pessoaEntity.DataNascimento,
                 Nome = pessoaEntity.Nome,
@@ -27,7 +26,6 @@ namespace EstudosDDD.Application.Converters
         {
             PessoaEntity pessoaEntity = new PessoaEntity()
             {
-                CodigoEndereco = pessoaDto.CodigoEndereco,
                 CodigoLogin = pessoaDto.CodigoLogin,
                 DataNascimento = pessoaDto.DataNascimento,
                 Nome = pessoaDto.Nome,

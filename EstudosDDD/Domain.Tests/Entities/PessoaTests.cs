@@ -1,4 +1,5 @@
-﻿using EstudosDDD.Domain.Entities;
+﻿using System;
+using EstudosDDD.Domain.Entities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Domain.Tests.Entities
@@ -18,7 +19,7 @@ namespace Domain.Tests.Entities
             string sobrenome = "Uliam";
 
             //act
-            pessoa = new PessoaEntity(nome,sobrenome,loginEntity);
+            pessoa = new PessoaEntity(nome,sobrenome,DateTime.Now,loginEntity);
 
             Assert.IsNotNull(pessoa);
             Assert.IsFalse(string.IsNullOrWhiteSpace(pessoa.Nome));
@@ -26,7 +27,7 @@ namespace Domain.Tests.Entities
             Assert.IsFalse(pessoa.Login==null);
             Assert.AreEqual(pessoa.Nome,nome);
             Assert.AreEqual(pessoa.SobreNome,sobrenome);
-            Assert.AreEqual(pessoa.Login,loginEntity);
+            Assert.AreEqual(pessoa.CodigoLogin,1);
             
         }
     }
