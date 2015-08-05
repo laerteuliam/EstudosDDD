@@ -16,7 +16,7 @@ namespace EstudosDDD.Data.Migrations
 
         protected override void Seed(EstudosDbContext context)
         {
-            if (System.Diagnostics.Debugger.IsAttached == false) System.Diagnostics.Debugger.Launch();
+            //if (System.Diagnostics.Debugger.IsAttached == false) System.Diagnostics.Debugger.Launch();
 
             context.LoginEntities.AddOrUpdate(x => x.Login, new LoginEntity("login1", "senha1"));
             context.LoginEntities.AddOrUpdate(x => x.Login, new LoginEntity("login2", "senha2"));
@@ -24,6 +24,10 @@ namespace EstudosDDD.Data.Migrations
 
             LoginEntity login = context.LoginEntities.FirstOrDefault(x => x.Login == "login1");
             context.PessoaEntities.AddOrUpdate(x => x.Nome, new PessoaEntity("nome1", "sobrenome1", new DateTime(1983,11,26),login));
+            login = context.LoginEntities.FirstOrDefault(x => x.Login == "login2");
+            context.PessoaEntities.AddOrUpdate(x => x.Nome, new PessoaEntity("nome2", "sobrenome2", new DateTime(1983,11,26),login));
+            login = context.LoginEntities.FirstOrDefault(x => x.Login == "login3");
+            context.PessoaEntities.AddOrUpdate(x => x.Nome, new PessoaEntity("nome3", "sobrenome3", new DateTime(1983,11,26),login));
         }
     }
 }
