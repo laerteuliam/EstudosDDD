@@ -9,7 +9,6 @@ namespace EstudosDDD.Infra.CrossCutting.Ioc.Containers
         public static void RegisterDomainService(this Container container)
         {
             container.BatchRegister<PessoaDomainService>();
-            container.BatchRegister<LoginDomainService>();
         }
     }
 }

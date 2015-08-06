@@ -9,7 +9,7 @@ using EstudosDDD.Domain.Contracts.Services;
 namespace EstudosDDD.Application.Services
 {
     public sealed class PessoaApplicationService :
-        ApplicationService,
+        Core.ApplicationService,
         IPessoaApplicationService
     {
         private readonly IPessoaDomainService _pessoaDomainService;

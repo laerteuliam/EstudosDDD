@@ -1,14 +1,17 @@
-﻿//[assembly: WebActivator.PostApplicationStartMethod(typeof(EstudosDDD.UI.Web.), "Initialize")]
+﻿[assembly: WebActivator.PostApplicationStartMethod(typeof(EstudosDDD.UI.Web.App_Start.SimpleInjectorInitializer), "Initialize")]
 
-using System.Reflection;
-using System.Web.Mvc;
-using EstudosDDD.Infra.CrossCutting.Ioc;
-using SimpleInjector;
-using SimpleInjector.Integration.Web;
-using SimpleInjector.Integration.Web.Mvc;
 
 namespace EstudosDDD.UI.Web.App_Start
 {
+    using System.Reflection;
+    using System.Web.Mvc;
+
+    using SimpleInjector;
+    using SimpleInjector.Extensions;
+    using SimpleInjector.Integration.Web;
+    using SimpleInjector.Integration.Web.Mvc;
+    using EstudosDDD.Infra.CrossCutting.Ioc;
+
     public static class SimpleInjectorInitializer
     {
         /// <summary>Initialize the container and register it as MVC3 Dependency Resolver.</summary>

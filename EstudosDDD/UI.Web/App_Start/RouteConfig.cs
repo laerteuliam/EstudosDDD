@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace EstudosDDD.UI.Web
+namespace EstudosDDD.UI.Web.App_Start
 {
     public class RouteConfig
     {
