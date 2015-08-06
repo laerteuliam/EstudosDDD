@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using EstudosDDD.Application.Dtos;
+﻿using EstudosDDD.Application.Dtos;
 using EstudosDDD.Domain.Entities;
 
 namespace EstudosDDD.Application.Converters
@@ -12,7 +7,7 @@ namespace EstudosDDD.Application.Converters
     {
         public static PessoaDto ToDto(this PessoaEntity pessoaEntity)
         {
-            PessoaDto pessoaDto = new PessoaDto()
+            var pessoaDto = new PessoaDto
             {
                 CodigoLogin = pessoaEntity.CodigoLogin,
                 DataNascimento = pessoaEntity.DataNascimento,
@@ -24,7 +19,7 @@ namespace EstudosDDD.Application.Converters
 
         public static PessoaEntity ToEntity(this PessoaDto pessoaDto)
         {
-            PessoaEntity pessoaEntity = new PessoaEntity()
+            var pessoaEntity = new PessoaEntity
             {
                 CodigoLogin = pessoaDto.CodigoLogin,
                 DataNascimento = pessoaDto.DataNascimento,
@@ -33,6 +28,5 @@ namespace EstudosDDD.Application.Converters
             };
             return pessoaEntity;
         }
-
     }
 }

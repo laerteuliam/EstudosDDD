@@ -1,11 +1,11 @@
-﻿using EstudosDDD.Domain.Entities;
+﻿using EstudosDDD.Domain.Contracts.Repositories.Core;
+using EstudosDDD.Domain.Entities;
 
 namespace EstudosDDD.Domain.Contracts.Repositories
 {
-    public interface IRepositoryPessoa:
-        Core.IRepositoryAdd<PessoaEntity,int>,
-        Core.IRepositoryGetAll<PessoaEntity,int>
+    public interface IRepositoryPessoa :
+        IRepositoryAdd<PessoaEntity, int>,
+        IRepositoryGetAll<PessoaEntity, int>
     {
-         
     }
 }

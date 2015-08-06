@@ -1,5 +1,5 @@
-﻿using EstudosDDD.Infra.CrossCutting.Ioc.Extensions;
-using EstudosDDD.Domain.Services;
+﻿using EstudosDDD.Domain.Services;
+using EstudosDDD.Infra.CrossCutting.Ioc.Extensions;
 using SimpleInjector;
 
 namespace EstudosDDD.Infra.CrossCutting.Ioc.Containers

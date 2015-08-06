@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using EstudosDDD.Domain.Entities.Core;
 
 namespace EstudosDDD.Domain.Entities
 {
-    public sealed class EstadoEntity : Core.Entity<int>
+    public sealed class EstadoEntity : Entity<int>
     {
         public string Estado { get; set; }
         public string Sigla { get; set; }

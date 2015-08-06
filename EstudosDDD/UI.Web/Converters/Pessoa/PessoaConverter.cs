@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.ModelBinding;
-using EstudosDDD.Application.Dtos;
+﻿using EstudosDDD.Application.Dtos;
+using EstudosDDD.UI.Web.Models.Pessoa;
 
-namespace UI.Web.Converters.Pessoa
+namespace EstudosDDD.UI.Web.Converters.Pessoa
 {
     public static class PessoaConverter
     {
-        public static Models.Pessoa.IndexModel ToModel(PessoaDto pessoaDto)
+        public static IndexModel ToModel(PessoaDto pessoaDto)
         {
-            return new Models.Pessoa.IndexModel()
+            return new IndexModel
             {
                 Codigo = pessoaDto.Codigo,
                 CodigoLogin = pessoaDto.CodigoLogin,

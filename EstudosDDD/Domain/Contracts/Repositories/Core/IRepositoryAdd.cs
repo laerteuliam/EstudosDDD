@@ -1,7 +1,9 @@
-﻿namespace EstudosDDD.Domain.Contracts.Repositories.Core
+﻿using EstudosDDD.Domain.Entities.Core;
+
+namespace EstudosDDD.Domain.Contracts.Repositories.Core
 {
-    public interface IRepositoryAdd<TEntity,TCodigo>
-        where TEntity: Entities.Core.Entity<TCodigo>
+    public interface IRepositoryAdd<TEntity, TCodigo>
+        where TEntity : Entity<TCodigo>
     {
         void Add(TEntity entity);
     }

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using EstudosDDD.Data.Contexts;
 using EstudosDDD.Domain.Contracts.Repositories;
@@ -19,7 +18,6 @@ namespace EstudosDDD.Data.Repositories
         public void Add(PessoaEntity entity)
         {
             _context.LoginEntities.Add(entity.Login);
-
         }
 
         public IEnumerable<PessoaEntity> GetAll()

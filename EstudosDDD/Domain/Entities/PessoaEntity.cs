@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
+using EstudosDDD.Domain.Entities.Core;
 
 namespace EstudosDDD.Domain.Entities
 {
-    public sealed class PessoaEntity : Core.Entity<int>
+    public sealed class PessoaEntity : Entity<int>
     {
         public PessoaEntity()
         {
-            
         }
 
         public PessoaEntity(string nome, string sobrenome, DateTime dataNascimento, LoginEntity loginEntity)

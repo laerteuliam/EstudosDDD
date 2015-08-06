@@ -2,12 +2,14 @@
 using System.Linq;
 using EstudosDDD.Application.Contracts;
 using EstudosDDD.Application.Converters;
+using EstudosDDD.Application.Dtos;
+using EstudosDDD.Application.Services.Core;
 using EstudosDDD.Domain.Contracts.Services;
 
 namespace EstudosDDD.Application.Services
 {
-    public sealed class PessoaApplicationService : 
-        Core.ApplicationService,
+    public sealed class PessoaApplicationService :
+        ApplicationService,
         IPessoaApplicationService
     {
         private readonly IPessoaDomainService _pessoaDomainService;
@@ -17,14 +19,14 @@ namespace EstudosDDD.Application.Services
             _pessoaDomainService = pessoaDomainService;
         }
 
-        public void Cadastrar(Dtos.PessoaDto pessoaDto)
+        public void Cadastrar(PessoaDto pessoaDto)
         {
             Begin();
             _pessoaDomainService.Cadastrar(pessoaDto.ToEntity());
             SaveChanges();
         }
 
-        public IEnumerable<Dtos.PessoaDto> Listar()
+        public IEnumerable<PessoaDto> Listar()
         {
             return _pessoaDomainService.Listar().ToList().ConvertAll(PessoaConverter.ToDto);
         }

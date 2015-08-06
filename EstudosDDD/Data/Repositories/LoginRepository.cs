@@ -1,10 +1,8 @@
-﻿using EstudosDDD.Data.Contexts;
-using EstudosDDD.Domain.Contracts.Repositories;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using EstudosDDD.Data.Contexts;
+using EstudosDDD.Domain.Contracts.Repositories;
+using EstudosDDD.Domain.Entities;
 
 namespace EstudosDDD.Data.Repositories
 {
@@ -17,14 +15,14 @@ namespace EstudosDDD.Data.Repositories
             _context = context;
         }
 
-        public void Add(Domain.Entities.LoginEntity entity)
+        public void Add(LoginEntity entity)
         {
             throw new NotImplementedException();
         }
 
-        Domain.Entities.LoginEntity IRepositoryLogin.GetByLoginSenha(string login, string senha)
+        LoginEntity IRepositoryLogin.GetByLoginSenha(string login, string senha)
         {
-            var ret = _context.LoginEntities.FirstOrDefault(x => x.Login == login && x.Senha==senha);
+            LoginEntity ret = _context.LoginEntities.FirstOrDefault(x => x.Login == login && x.Senha == senha);
             return ret;
         }
     }

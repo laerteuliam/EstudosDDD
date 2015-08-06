@@ -1,26 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using EstudosDDD.Application.Contracts;
-using EstudosDDD.Application.Dtos;
+using EstudosDDD.UI.Web.Converters.Pessoa;
+using EstudosDDD.UI.Web.Models.Pessoa;
 
-namespace UI.Web.Controllers
+namespace EstudosDDD.UI.Web.Controllers
 {
     public class PessoaController : Controller
     {
-        private IPessoaApplicationService _pessoaApplicationService;
+        private readonly IPessoaApplicationService _pessoaApplicationService;
 
         public PessoaController(IPessoaApplicationService pessoaApplicationService)
         {
             _pessoaApplicationService = pessoaApplicationService;
         }
-        
+
         // GET: Pessoa
         public ActionResult Index()
         {
-            var lista = _pessoaApplicationService.Listar().ToList().ConvertAll(Converters.Pessoa.PessoaConverter.ToModel);
+            List<IndexModel> lista = _pessoaApplicationService.Listar().ToList().ConvertAll(PessoaConverter.ToModel);
             return View(lista);
         }
     }

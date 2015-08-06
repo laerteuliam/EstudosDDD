@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using EstudosDDD.Domain.Contracts.Repositories;
 using EstudosDDD.Domain.Contracts.Services;
+using EstudosDDD.Domain.Entities;
 
 namespace EstudosDDD.Domain.Services
 {
@@ -17,12 +14,12 @@ namespace EstudosDDD.Domain.Services
             _repositoryPessoa = repositoryPessoa;
         }
 
-        public void Cadastrar(Entities.PessoaEntity entity)
+        public void Cadastrar(PessoaEntity entity)
         {
             _repositoryPessoa.Add(entity);
         }
 
-        public IEnumerable<Entities.PessoaEntity> Listar()
+        public IEnumerable<PessoaEntity> Listar()
         {
             return _repositoryPessoa.GetAll();
         }

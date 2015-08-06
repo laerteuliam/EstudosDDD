@@ -4,6 +4,5 @@ namespace EstudosDDD.Domain.Contracts.UnitOfWork
 {
     public interface IEstudosDDDUnityOfWork : IUnityOfWork
     {
-         
     }
 }

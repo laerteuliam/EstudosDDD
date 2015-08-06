@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EstudosDDD.Application.Dtos
+﻿namespace EstudosDDD.Application.Dtos
 {
     public sealed class LoginDto
     {
