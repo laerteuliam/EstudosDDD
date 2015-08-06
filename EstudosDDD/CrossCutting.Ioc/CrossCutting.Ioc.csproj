@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapters\SimpleInjectorServiceLocatorAdapter.cs" />
     <Compile Include="Containers\DomainServiceContainer.cs" />
     <Compile Include="Containers\ApplicationServiceContainer.cs" />
     <Compile Include="Containers\DbContextContainer.cs" />

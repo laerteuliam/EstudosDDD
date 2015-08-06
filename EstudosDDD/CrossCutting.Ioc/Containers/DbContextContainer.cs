@@ -6,9 +6,9 @@ namespace EstudosDDD.Infra.CrossCutting.Ioc.Containers
 {
     public static class DbContextContainer
     {
-        public static void RegisterDbContext(this Container container)
+        public static void RegisterDbContext(this Container container, Lifestyle lifestyle)
         {
-            container.BatchRegister<EstudosDbContext>();
+            container.Register<EstudosDbContext>(lifestyle);
         }
     }
 }

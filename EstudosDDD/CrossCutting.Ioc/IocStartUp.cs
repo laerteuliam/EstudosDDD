@@ -1,4 +1,5 @@
 ﻿using EstudosDDD.Infra.CrossCutting.Ioc.Containers;
+using Microsoft.Practices.ServiceLocation;
 using SimpleInjector;
 
 namespace EstudosDDD.Infra.CrossCutting.Ioc
@@ -7,11 +8,14 @@ namespace EstudosDDD.Infra.CrossCutting.Ioc
     {
         public static void BootStrap(Container container, Lifestyle lifestyle)
         {
-            container.RegisterApplicationService();
-            container.RegisterDbContext();
-            container.RegisterDomainService();
+            container.RegisterDbContext(lifestyle);
+            
             container.RegisterRepository();
+            container.RegisterDomainService();
+            container.RegisterApplicationService();
             container.RegisterUnityOfWork();
+
+            ServiceLocator.SetLocatorProvider(() => new Adapters.SimpleInjectorServiceLocatorAdapter(container));
         }
     }
 }
