@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using SimpleInjector;
 using System.Reflection;
 
-namespace CrossCutting.Ioc.Extensions
+namespace EstudosDDD.Infra.CrossCutting.Ioc.Extensions
 {
     public static class ContainerExtension
     {

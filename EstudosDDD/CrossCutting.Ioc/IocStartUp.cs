@@ -1,7 +1,7 @@
-﻿using CrossCutting.Ioc.Containers;
+﻿using EstudosDDD.Infra.CrossCutting.Ioc.Containers;
 using SimpleInjector;
 
-namespace CrossCutting.Ioc
+namespace EstudosDDD.Infra.CrossCutting.Ioc
 {
     public static class IocStartUp
     {

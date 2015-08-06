@@ -898,6 +898,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\SimpleInjectorInitializer.cs" />
     <Compile Include="Controllers\PessoaController.cs" />
     <Compile Include="Converters\Pessoa\PessoaConverter.cs" />
     <Compile Include="Global.asax.cs">
@@ -975,6 +976,10 @@
     <ProjectReference Include="..\Application\Application.csproj">
       <Project>{e2dd851f-47c2-4c89-a646-af6fe48824d7}</Project>
       <Name>Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CrossCutting.Ioc\CrossCutting.Ioc.csproj">
+      <Project>{0ba39c92-9a7c-4565-b9b4-ba3379311c55}</Project>
+      <Name>CrossCutting.Ioc</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

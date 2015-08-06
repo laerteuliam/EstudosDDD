@@ -1,8 +1,8 @@
-﻿using CrossCutting.Ioc.Extensions;
+﻿using EstudosDDD.Infra.CrossCutting.Ioc.Extensions;
 using EstudosDDD.Domain.Services;
 using SimpleInjector;
 
-namespace CrossCutting.Ioc.Containers
+namespace EstudosDDD.Infra.CrossCutting.Ioc.Containers
 {
     public static class DomainServiceContainer
     {
