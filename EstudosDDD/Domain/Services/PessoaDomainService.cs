@@ -7,9 +7,9 @@ namespace EstudosDDD.Domain.Services
 {
     public sealed class PessoaDomainService : IPessoaDomainService
     {
-        private readonly IRepositoryPessoa _repositoryPessoa;
+        private readonly IPessoaRepository _repositoryPessoa;
 
-        public PessoaDomainService(IRepositoryPessoa repositoryPessoa)
+        public PessoaDomainService(IPessoaRepository repositoryPessoa)
         {
             _repositoryPessoa = repositoryPessoa;
         }

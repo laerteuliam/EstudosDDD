@@ -3,7 +3,7 @@ using EstudosDDD.Domain.Entities;
 
 namespace EstudosDDD.Domain.Contracts.Repositories
 {
-    public interface IRepositoryPessoa :
+    public interface IPessoaRepository :
         IRepositoryAdd<PessoaEntity, int>,
         IRepositoryGetAll<PessoaEntity, int>
     {

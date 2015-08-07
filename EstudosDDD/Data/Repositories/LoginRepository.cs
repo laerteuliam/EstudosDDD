@@ -6,7 +6,7 @@ using EstudosDDD.Domain.Entities;
 
 namespace EstudosDDD.Data.Repositories
 {
-    public sealed class LoginRepository : IRepositoryLogin
+    public sealed class LoginRepository : ILoginRepository
     {
         private readonly EstudosDbContext _context;
 
@@ -20,7 +20,7 @@ namespace EstudosDDD.Data.Repositories
             throw new NotImplementedException();
         }
 
-        LoginEntity IRepositoryLogin.GetByLoginSenha(string login, string senha)
+        LoginEntity ILoginRepository.GetByLoginSenha(string login, string senha)
         {
             LoginEntity ret = _context.LoginEntities.FirstOrDefault(x => x.Login == login && x.Senha == senha);
             return ret;

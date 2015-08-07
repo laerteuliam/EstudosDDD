@@ -6,7 +6,7 @@ using EstudosDDD.Domain.Entities;
 
 namespace EstudosDDD.Data.Repositories
 {
-    public sealed class PessoaRepository : IRepositoryPessoa
+    public sealed class PessoaRepository : IPessoaRepository
     {
         private readonly EstudosDbContext _context;
 

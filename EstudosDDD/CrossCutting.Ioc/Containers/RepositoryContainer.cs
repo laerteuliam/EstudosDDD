@@ -9,7 +9,6 @@ namespace EstudosDDD.Infra.CrossCutting.Ioc.Containers
         public static void RegisterRepository(this Container container)
         {
             container.BatchRegister<PessoaRepository>();
-            container.BatchRegister<LoginRepository>();
         }
     }
 }

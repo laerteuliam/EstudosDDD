@@ -6,7 +6,7 @@ namespace EstudosDDD.Domain.Services
 {
     public sealed class LoginDomainService : ILoginDomainService
     {
-        private readonly IRepositoryLogin _repositoryLogin;
+        private readonly ILoginRepository _repositoryLogin;
 
         public bool Logar(LoginEntity l)
         {

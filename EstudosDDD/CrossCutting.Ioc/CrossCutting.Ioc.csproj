@@ -66,7 +66,7 @@
     <Compile Include="Containers\RepositoryContainer.cs" />
     <Compile Include="Containers\UnityOfWorkContainer.cs" />
     <Compile Include="Extensions\ContainerExtension.cs" />
-    <Compile Include="IocStartUp.cs" />
+    <Compile Include="IoCStartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

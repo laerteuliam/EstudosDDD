@@ -3,7 +3,7 @@ using EstudosDDD.Domain.Entities;
 
 namespace EstudosDDD.Domain.Contracts.Repositories
 {
-    public interface IRepositoryLogin :
+    public interface ILoginRepository :
         IRepositoryAdd<LoginEntity, int>
     {
         LoginEntity GetByLoginSenha(string login, string senha);
