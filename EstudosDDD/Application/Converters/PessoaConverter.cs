@@ -9,6 +9,7 @@ namespace EstudosDDD.Application.Converters
         {
             var pessoaDto = new PessoaDto
             {
+                Codigo = pessoaEntity.Codigo,
                 CodigoLogin = pessoaEntity.CodigoLogin,
                 DataNascimento = pessoaEntity.DataNascimento,
                 Nome = pessoaEntity.Nome,
@@ -21,6 +22,7 @@ namespace EstudosDDD.Application.Converters
         {
             var pessoaEntity = new PessoaEntity
             {
+                Codigo = pessoaDto.Codigo,
                 CodigoLogin = pessoaDto.CodigoLogin,
                 DataNascimento = pessoaDto.DataNascimento,
                 Nome = pessoaDto.Nome,
