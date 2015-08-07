@@ -985,6 +985,10 @@
       <Project>{0ba39c92-9a7c-4565-b9b4-ba3379311c55}</Project>
       <Name>CrossCutting.Ioc</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{55c921a9-112b-4196-aea5-b356c4070a76}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

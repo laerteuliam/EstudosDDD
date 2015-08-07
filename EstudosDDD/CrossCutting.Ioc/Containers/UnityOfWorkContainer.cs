@@ -1,4 +1,5 @@
 ﻿using EstudosDDD.Data.UnityOfWork;
+using EstudosDDD.Infra.CrossCutting.Ioc.Extensions;
 using SimpleInjector;
 
 namespace EstudosDDD.Infra.CrossCutting.Ioc.Containers
@@ -7,7 +8,7 @@ namespace EstudosDDD.Infra.CrossCutting.Ioc.Containers
     {
         public static void RegisterUnityOfWork(this Container container)
         {
-            container.Register<EstudosDDDUnityOfWork>();
+            container.BatchRegister<EstudosDDDUnityOfWork>();
         }
     }
 }
