@@ -54,7 +54,7 @@
                 @*@Html.ActionLink("Editar", "Editar", new {id = item.Codigo}) |
                    @Html.ActionLink("Detalhes", "Detalhes", new {id = item.Codigo}) |
                     @Html.ActionLink("Remover", "Remover", new {id = item.Codigo})*@
-                <a href ng-click="select({{$index}})">Detalhes</a>
+                <a href ng-click="select($index)">Detalhes</a>
             </td>
         </tr>
 
