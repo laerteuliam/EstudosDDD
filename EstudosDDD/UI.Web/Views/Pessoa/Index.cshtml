@@ -12,12 +12,34 @@
 </p>
 <div id="divPessoaController" ng-controller="PessoaController as pessoa" ng-init="Iniciar()">
     
-    <div id="divPessoaDetalhes">
-        {{itemSelecionado.Codigo}}
-        {{itemSelecionado.Nome}}
-        {{itemSelecionado.SobreNome}}
-        {{itemSelecionado.DataNascimento}}
+    <div id="divPessoaDetalhes" ng-show="!isEdit() && isSelected()">
+        Visualizar
+        <ul>
+            <li>{{itemSelecionado.Codigo}}</li>
+            <li>{{itemSelecionado.Nome}}</li>
+            <li>{{itemSelecionado.SobreNome}}</li>
+            <li>{{itemSelecionado.DataNascimento}}</li>
+        </ul>
     </div>
+    
+    <div id="divPessoaEditar" ng-show="isEdit()">
+        Editar
+        <ul>
+            <li>
+                <input type="text" ng-model="itemSelecionado.Codigo"/>
+            </li>
+            <li>
+                <input type="text" ng-model="itemSelecionado.Nome" />
+            </li>
+            <li>
+                <input type="text" ng-model="itemSelecionado.SobreNome" />
+            </li>
+            <li>
+                <input type="text" ng-model="itemSelecionado.DataNascimento" />
+            </li>
+        </ul>
+    </div>
+
 
     <table class="table">
         <tr>
@@ -54,6 +76,7 @@
                 @*@Html.ActionLink("Editar", "Editar", new {id = item.Codigo}) |
                    @Html.ActionLink("Detalhes", "Detalhes", new {id = item.Codigo}) |
                     @Html.ActionLink("Remover", "Remover", new {id = item.Codigo})*@
+                <a href ng-click="edit($index)">Editar</a>
                 <a href ng-click="select($index)">Detalhes</a>
             </td>
         </tr>

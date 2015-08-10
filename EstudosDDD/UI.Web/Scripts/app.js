@@ -4,18 +4,26 @@
     app.controller('PessoaController', function ($scope,$http) {
 
 
+        $scope.isEdit = function() {
+            return $scope.Editable;
+        };
+
+        $scope.edit = function(index) {
+            $scope.select(index);
+            $scope.Editable = true;
+        };
+
         $scope.select = function (index) {
             $scope.itemSelecionado = $scope.Items[index];
+            $scope.Editable = false;
         };
 
         $scope.isSelected = function() {
-            return ($scope.itemSelecionado != 'undefined');
+            return ($scope.itemSelecionado != undefined);
         };
 
         $scope.Iniciar = function () {
-
-            $scope.index = 0;
-
+            $scope.Editable = false;
             $http.post('/Pessoa/Listar').
             then(function (response) {
                 $scope.Items = response.data;
