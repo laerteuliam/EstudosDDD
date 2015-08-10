@@ -1,4 +1,5 @@
 ﻿@using EstudosDDD.UI.Web.Models.Pessoa
+@using EstudosDDD.UI.Web.Views.Pessoa
 @model IEnumerable<EstudosDDD.UI.Web.Models.Pessoa.IndexModel>
 
 @{
@@ -11,44 +12,47 @@
 <p>
     @Html.ActionLink("Adicionar", "Adicionar")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Codigo)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Nome)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SobreNome)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DataNascimento)
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (IndexModel item in Model)
-    {
+<script>
+    var modelos = @(Html.ToJson(Model));
+</script>
+<div id="divPessoa" ng-controller="PessoaController as pessoa" ng-init="pessoa.setModels(modelos)">
+    <table class="table">
         <tr>
+            <th>
+                Código
+            </th>
+            <th>
+                Nome
+            </th>
+            <th>
+                Sobrenome
+            </th>
+            <th>
+                Data Nascimento
+            </th>
+            <th></th>
+        </tr>
+
+        
+        <tr ng-repeat="item in pessoa.Models">
             <td>
-                @Html.DisplayFor(modelItem => item.Codigo)
+                {{item.Codigo}}
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Nome)
+                {{item.Nome}}
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.SobreNome)
+                {{item.SobreNome}}
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DataNascimento)
+                {{item.DataNascimento}}
             </td>
             <td>
-                @Html.ActionLink("Editar", "Editar", new {id = item.Codigo}) |
-                @Html.ActionLink("Detalhes", "Detalhes", new {id = item.Codigo}) |
-                @Html.ActionLink("Remover", "Remover", new {id = item.Codigo})
+                @*@Html.ActionLink("Editar", "Editar", new {id = item.Codigo}) |
+                    @Html.ActionLink("Detalhes", "Detalhes", new {id = item.Codigo}) |
+                    @Html.ActionLink("Remover", "Remover", new {id = item.Codigo})*@
             </td>
         </tr>
-    }
 
-</table>
+    </table>
+</div>
