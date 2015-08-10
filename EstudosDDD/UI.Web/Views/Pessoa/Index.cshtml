@@ -12,10 +12,7 @@
 <p>
     @Html.ActionLink("Adicionar", "Adicionar")
 </p>
-<script>
-    var modelos = @(Html.ToJson(Model));
-</script>
-<div id="divPessoa" ng-controller="PessoaController as pessoa" ng-init="pessoa.setModels(modelos)">
+<div id="divPessoa" ng-controller="PessoaController as pessoa" ng-init="Iniciar()">
     <table class="table">
         <tr>
             <th>
@@ -34,7 +31,7 @@
         </tr>
 
         
-        <tr ng-repeat="item in pessoa.Models">
+        <tr ng-repeat="item in Items">
             <td>
                 {{item.Codigo}}
             </td>

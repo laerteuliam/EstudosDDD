@@ -19,8 +19,13 @@ namespace EstudosDDD.UI.Web.Controllers
         // GET: Pessoa
         public ActionResult Index()
         {
+            return View();
+        }
+
+        public JsonResult Listar()
+        {
             List<IndexModel> lista = _pessoaApplicationService.Listar().ToList().ConvertAll(PessoaConverter.ToModel);
-            return View(lista);
+            return Json(lista);
         }
     }
 }
