@@ -3,6 +3,9 @@
 
     app.controller('PessoaController', function ($scope,$http) {
 
+        $scope.Salvar = function() {
+            alert('Salvo com sucesso.');
+        };
 
         $scope.isEdit = function() {
             return $scope.Editable;
