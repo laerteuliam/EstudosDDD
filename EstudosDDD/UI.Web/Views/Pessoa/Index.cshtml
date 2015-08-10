@@ -1,6 +1,4 @@
-﻿@using EstudosDDD.UI.Web.Models.Pessoa
-@using EstudosDDD.UI.Web.Views.Pessoa
-@model IEnumerable<EstudosDDD.UI.Web.Models.Pessoa.IndexModel>
+﻿@model IEnumerable<EstudosDDD.UI.Web.Models.Pessoa.IndexModel>
 
 @{
     ViewBag.Title = "Pessoas";
@@ -12,7 +10,15 @@
 <p>
     @Html.ActionLink("Adicionar", "Adicionar")
 </p>
-<div id="divPessoa" ng-controller="PessoaController as pessoa" ng-init="Iniciar()">
+<div id="divPessoaController" ng-controller="PessoaController as pessoa" ng-init="Iniciar()">
+    
+    <div id="divPessoaDetalhes">
+        {{itemSelecionado.Codigo}}
+        {{itemSelecionado.Nome}}
+        {{itemSelecionado.SobreNome}}
+        {{itemSelecionado.DataNascimento}}
+    </div>
+
     <table class="table">
         <tr>
             <th>
@@ -46,8 +52,9 @@
             </td>
             <td>
                 @*@Html.ActionLink("Editar", "Editar", new {id = item.Codigo}) |
-                    @Html.ActionLink("Detalhes", "Detalhes", new {id = item.Codigo}) |
+                   @Html.ActionLink("Detalhes", "Detalhes", new {id = item.Codigo}) |
                     @Html.ActionLink("Remover", "Remover", new {id = item.Codigo})*@
+                <a href ng-click="select({{$index}})">Detalhes</a>
             </td>
         </tr>
 

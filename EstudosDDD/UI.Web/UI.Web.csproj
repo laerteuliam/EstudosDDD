@@ -912,7 +912,6 @@
     <Compile Include="Models\Login\IndexModel.cs" />
     <Compile Include="Models\Pessoa\IndexModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\Pessoa\HtmlHelperExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
