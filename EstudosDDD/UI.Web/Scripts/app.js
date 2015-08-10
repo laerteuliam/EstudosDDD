@@ -25,6 +25,13 @@
             return ($scope.itemSelecionado != undefined);
         };
 
+        $scope.panelTitle = function() {
+            if ($scope.isEdit())
+                return "Editar";
+            else
+                return "Visualizar";
+        };
+
         $scope.Iniciar = function () {
             $scope.Editable = false;
             $http.post('/Pessoa/Listar').
