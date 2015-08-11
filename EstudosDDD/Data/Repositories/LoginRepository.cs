@@ -15,7 +15,7 @@ namespace EstudosDDD.Data.Repositories
             _context = context;
         }
 
-        public void Add(LoginEntity entity)
+        public int Add(LoginEntity entity)
         {
             throw new NotImplementedException();
         }

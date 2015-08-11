@@ -53,7 +53,8 @@
     <Compile Include="Contracts\Repositories\Core\IRepositoryUpdate.cs" />
     <Compile Include="Contracts\Repositories\ILoginRepository.cs" />
     <Compile Include="Contracts\Repositories\IPessoaRepository.cs" />
-    <Compile Include="Contracts\Services\Core\IDomainServiceCadastrar.cs" />
+    <Compile Include="Contracts\Services\Core\IDomainServiceEditar.cs" />
+    <Compile Include="Contracts\Services\Core\IDomainServiceInserir.cs" />
     <Compile Include="Contracts\Services\Core\IDomainServiceListar.cs" />
     <Compile Include="Contracts\Services\ILoginDomainService.cs" />
     <Compile Include="Contracts\Services\IPessoaDomainService.cs" />

@@ -19,10 +19,13 @@ namespace EstudosDDD.Application.Services
             _pessoaDomainService = pessoaDomainService;
         }
 
-        public void Cadastrar(PessoaDto pessoaDto)
+        public void Salvar(PessoaDto pessoaDto)
         {
             Begin();
-            _pessoaDomainService.Cadastrar(pessoaDto.ToEntity());
+            if(pessoaDto.Codigo>0)
+                _pessoaDomainService.Editar(pessoaDto.ToEntity());
+            else
+                _pessoaDomainService.Inserir(pessoaDto.ToEntity());
             SaveChanges();
         }
 

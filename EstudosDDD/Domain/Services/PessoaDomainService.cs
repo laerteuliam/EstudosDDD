@@ -14,14 +14,19 @@ namespace EstudosDDD.Domain.Services
             _repositoryPessoa = repositoryPessoa;
         }
 
-        public void Cadastrar(PessoaEntity entity)
-        {
-            _repositoryPessoa.Add(entity);
-        }
-
         public IEnumerable<PessoaEntity> Listar()
         {
             return _repositoryPessoa.GetAll();
+        }
+
+        public void Editar(PessoaEntity t)
+        {
+            _repositoryPessoa.Update(t);
+        }
+
+        public int Inserir(PessoaEntity t)
+        {
+            return _repositoryPessoa.Add(t);
         }
     }
 }

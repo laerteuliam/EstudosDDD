@@ -1,4 +1,5 @@
 ﻿var app = angular.module('EstudosDDDApp', []);
+
 app.controller('PessoaController', function ($scope, $http) {
     $scope.Items = {};
     $scope.Editable = false;
@@ -18,7 +19,14 @@ app.controller('PessoaController', function ($scope, $http) {
         $scope.Editable = true;
     };
     $scope.salvar = function () {
-        alert('Salvo com sucesso.');
+        $http.post('/Pessoa/Salvar',$scope.ItemSelecionado).
+        then(function (response) {
+            alert('Salvo com sucesso.');
+        }, function (response) {
+            // called asynchronously if an error occurs
+            // or server returns response with an error status.
+        });
+        
     };
     $scope.isEdit = function () {
         return $scope.Editable;

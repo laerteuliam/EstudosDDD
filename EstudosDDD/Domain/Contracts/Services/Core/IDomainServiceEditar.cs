@@ -2,9 +2,9 @@
 
 namespace EstudosDDD.Domain.Contracts.Services.Core
 {
-    public interface IDomainServiceCadastrar<TEntity, TCodigo>
+    public interface IDomainServiceEditar<TEntity, TCodigo>
         where TEntity : Entity<TCodigo>
     {
-        void Cadastrar(TEntity t);
+        void Editar(TEntity t);
     }
 }

@@ -5,7 +5,7 @@ namespace EstudosDDD.Application.Contracts
 {
     public interface IPessoaApplicationService
     {
-        void Cadastrar(PessoaDto pessoaDto);
+        void Salvar(PessoaDto pessoaDto);
         IEnumerable<PessoaDto> Listar();
     }
 }

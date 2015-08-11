@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using EstudosDDD.Application.Contracts;
@@ -22,6 +23,14 @@ namespace EstudosDDD.UI.Web.Controllers
             return View();
         }
 
+        [HttpPost]
+        public void Salvar(IndexModel model)
+        {
+            model.DataNascimento = DateTime.Now;
+            _pessoaApplicationService.Salvar(model.ToDto());
+        }
+
+        [HttpPost]
         public JsonResult Listar()
         {
             List<IndexModel> lista = _pessoaApplicationService.Listar().ToList().ConvertAll(PessoaConverter.ToModel);
