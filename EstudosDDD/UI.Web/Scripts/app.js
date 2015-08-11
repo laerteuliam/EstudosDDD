@@ -1,42 +1,44 @@
 ﻿
     var app = angular.module('EstudosDDDApp', function (){});
 
-    app.controller('PessoaController', function ($scope,$http) {
+    app.controller('PessoaController', function ($http) {
+        this.Items = {};
+        this.Editable = false;
+        this.itemSelecionado = '';
 
-        $scope.Salvar = function() {
+        this.salvar = function() {
             alert('Salvo com sucesso.');
         };
 
-        $scope.isEdit = function() {
-            return $scope.Editable;
+        this.isEdit = function() {
+            return this.Editable;
         };
 
-        $scope.edit = function(index) {
-            $scope.select(index);
-            $scope.Editable = true;
+        this.edit = function(index) {
+            this.select(index);
+            this.Editable = true;
         };
 
-        $scope.select = function (index) {
-            $scope.itemSelecionado = $scope.Items[index];
-            $scope.Editable = false;
+        this.select = function (index) {
+            this.itemSelecionado = this.Items[index];
+            this.Editable = false;
         };
 
-        $scope.isSelected = function() {
-            return ($scope.itemSelecionado != undefined);
+        this.isSelected = function() {
+            return (this.itemSelecionado != undefined);
         };
 
-        $scope.panelTitle = function() {
-            if ($scope.isEdit())
+        this.panelTitle = function() {
+            if (this.isEdit())
                 return "Editar";
             else
                 return "Visualizar";
         };
-
-        $scope.Iniciar = function () {
-            $scope.Editable = false;
+        
+        this.iniciar = function () {
             $http.post('/Pessoa/Listar').
             then(function (response) {
-                $scope.Items = response.data;
+                this.Items = response.data;
             }, function (response) {
                 // called asynchronously if an error occurs
                 // or server returns response with an error status.
