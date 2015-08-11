@@ -10,7 +10,7 @@
 <p>
     @Html.ActionLink("Adicionar", "Adicionar")
 </p>
-<div id="divPessoaController" ng-controller="PessoaController as pessoaCtrl" ng-init="pessoaCtrl.iniciar()">
+<div id="divPessoaController" ng-controller="PessoaController as pessoaCtrl">
     <div id="modalPessoaEditar" class="modal fade" role="dialog" aria-labeledby="modalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -73,18 +73,18 @@
         </tr>
 
 
-        <tr ng-repeat="item in pessoaCtrl.Items">
+        <tr ng-repeat="Item in pessoaCtrl.Items">
             <td>
-                {{item.Codigo}}
+                {{Item.Codigo}}
             </td>
             <td>
-                {{item.Nome}}
+                {{Item.Nome}}
             </td>
             <td>
-                {{item.SobreNome}}
+                {{Item.SobreNome}}
             </td>
             <td>
-                {{item.DataNascimento}}
+                {{Item.DataNascimento}}
             </td>
             <td>
                 @*@Html.ActionLink("Editar", "Editar", new {id = item.Codigo}) |
