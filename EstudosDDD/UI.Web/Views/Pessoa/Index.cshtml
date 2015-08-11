@@ -7,48 +7,48 @@
 
 <h2>@ViewBag.Title</h2>
 
-<p>
-    @Html.ActionLink("Adicionar", "Adicionar")
-</p>
-<div id="divPessoaController" ng-controller="PessoaController as pessoaCtrl">
+<div id="divPessoaController" ng-controller="PessoaController" ng-init="dataBind()">
+    <p>
+        <a href data-toggle="modal" data-target="#modalPessoaEditar" ng-click="adicionar()">Adicionar</a>
+    </p>
     <div id="modalPessoaEditar" class="modal fade" role="dialog" aria-labeledby="modalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="modalLabel">{{pessoaCtrl.panelTitle()}}</h4>
+                    <h4 class="modal-title" id="modalLabel">{{panelTitle()}}</h4>
                 </div>
                 <div class="modal-body">
                     <form class="form-horizontal">
                         <div class="form-group">
                             <label for="Codigo" class="col-sm-2 control-label">Código</label>
                             <div class="col-sm-10">
-                                <input type="text" id="Codigo" ng-model="pessoaCtrl.itemSelecionado.Codigo" class="form-control" disabled />
+                                <input type="text" id="Codigo" ng-model="ItemSelecionado.Codigo" class="form-control" disabled />
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="Nome" class="col-sm-2 control-label">Nome</label>
                             <div class="col-sm-10">
-                                <input type="text" id="Nome" ng-model="pessoaCtrl.itemSelecionado.Nome" class="form-control" ng-disabled="!pessoaCtrl.isEdit()" />
+                                <input type="text" id="Nome" ng-model="ItemSelecionado.Nome" class="form-control" ng-disabled="!isEdit()" />
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="Sobrenome" class="col-sm-2 control-label">Sobrenome</label>
                             <div class="col-sm-10">
-                                <input type="text" id="Sobrenome" ng-model="pessoaCtrl.itemSelecionado.SobreNome" class="form-control" ng-disabled="!pessoaCtrl.isEdit()" />
+                                <input type="text" id="Sobrenome" ng-model="ItemSelecionado.SobreNome" class="form-control" ng-disabled="!isEdit()" />
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="DataNascimento" class="col-sm-2 control-label">Data de Nascimento</label>
                             <div class="col-sm-10">
-                                <input type="text" id="DataNascimento" ng-model="pessoaCtrl.itemSelecionado.DataNascimento" class="form-control" ng-disabled="!pessoaCtrl.isEdit()" />
+                                <input type="text" id="DataNascimento" ng-model="ItemSelecionado.DataNascimento" class="form-control" ng-disabled="!isEdit()" />
                             </div>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-                    <button type="button" class="btn btn-primary" ng-click="pessoaCtrl.salvar()" ng-show="pessoaCtrl.isEdit()">Salvar</button>
+                    <button type="button" class="btn btn-primary" ng-click="salvar()" ng-show="isEdit()">Salvar</button>
                 </div>
             </div>
         </div>
@@ -73,7 +73,7 @@
         </tr>
 
 
-        <tr ng-repeat="Item in pessoaCtrl.Items">
+        <tr ng-repeat="Item in Items">
             <td>
                 {{Item.Codigo}}
             </td>
@@ -87,11 +87,8 @@
                 {{Item.DataNascimento}}
             </td>
             <td>
-                @*@Html.ActionLink("Editar", "Editar", new {id = item.Codigo}) |
-                @Html.ActionLink("Detalhes", "Detalhes", new {id = item.Codigo}) |
-                 @Html.ActionLink("Remover", "Remover", new {id = item.Codigo})*@
-                <a href ng-click="pessoaCtrl.edit($index)" data-toggle="modal" data-target="#modalPessoaEditar">Editar</a>
-                <a href ng-click="pessoaCtrl.select($index)" data-toggle="modal" data-target="#modalPessoaEditar">Detalhes</a>
+                <a href ng-click="edit($index)" data-toggle="modal" data-target="#modalPessoaEditar">Editar</a>
+                <a href ng-click="select($index)" data-toggle="modal" data-target="#modalPessoaEditar">Detalhes</a>
             </td>
         </tr>
 
