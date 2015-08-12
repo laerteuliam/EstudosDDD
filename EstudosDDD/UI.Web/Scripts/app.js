@@ -1,9 +1,9 @@
 ﻿var app = angular.module('EstudosDDDApp', []);
 
-app.controller('PessoaController', function ($scope, $http) {
-    $scope.Items = {};
+app.controller('PessoaController', function ($scope,$http) {
+    $scope.Items = [];
     $scope.Editable = false;
-    $scope.ItemSelecionado = undefined;
+    $scope.ItemSelecionado = {};
 
     $scope.dataBind = function() {
         $http.post('/Pessoa/Listar').

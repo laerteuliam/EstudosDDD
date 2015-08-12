@@ -73,18 +73,18 @@
         </tr>
 
 
-        <tr ng-repeat="Item in Items">
+        <tr ng-repeat="item in Items">
             <td>
-                {{Item.Codigo}}
+                {{item.Codigo}}
             </td>
             <td>
-                {{Item.Nome}}
+                {{item.Nome}}
             </td>
             <td>
-                {{Item.SobreNome}}
+                {{item.SobreNome}}
             </td>
             <td>
-                {{Item.DataNascimento}}
+                {{item.DataNascimento}}
             </td>
             <td>
                 <a href ng-click="edit($index)" data-toggle="modal" data-target="#modalPessoaEditar">Editar</a>
