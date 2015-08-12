@@ -1,11 +1,9 @@
-﻿var app = angular.module('EstudosDDDApp', []);
-
-app.controller('PessoaController', function ($scope,$http) {
+﻿app.controller('PessoaController', function ($scope, $http) {
     $scope.Items = [];
     $scope.Editable = false;
     $scope.ItemSelecionado = {};
 
-    $scope.dataBind = function() {
+    $scope.dataBind = function () {
         $http.post('/Pessoa/Listar').
         then(function (response) {
             $scope.Items = response.data;
@@ -14,12 +12,12 @@ app.controller('PessoaController', function ($scope,$http) {
             // or server returns response with an error status.
         });
     };
-    $scope.adicionar = function() {
+    $scope.adicionar = function () {
         $scope.ItemSelecionado = undefined;
         $scope.Editable = true;
     };
     $scope.salvar = function () {
-        $http.post('/Pessoa/Salvar',$scope.ItemSelecionado).
+        $http.post('/Pessoa/Salvar', $scope.ItemSelecionado).
         then(function (response) {
             alert('Salvo com sucesso.');
             $scope.dataBind();
@@ -27,7 +25,7 @@ app.controller('PessoaController', function ($scope,$http) {
             // called asynchronously if an error occurs
             // or server returns response with an error status.
         });
-        
+
     };
     $scope.isEdit = function () {
         return $scope.Editable;
@@ -44,9 +42,8 @@ app.controller('PessoaController', function ($scope,$http) {
         return ($scope.ItemSelecionado != undefined);
     };
     $scope.panelTitle = function () {
-        if ($scope.isEdit() && $scope.ItemSelecionado!=undefined) return "Editar";
+        if ($scope.isEdit() && $scope.ItemSelecionado != undefined) return "Editar";
         if ($scope.isEdit() && $scope.ItemSelecionado == undefined) return "Adicionar";
         if (!$scope.isEdit() && $scope.ItemSelecionado != undefined) return "Visualizar";
     };
 });
-

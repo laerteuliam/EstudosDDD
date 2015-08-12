@@ -5,6 +5,11 @@
     Layout = "~/Views/Shared/_layout.cshtml";
 }
 
+@section scripts
+{
+   <script src="~/Scripts/controllers/pessoaController.js"></script> 
+}
+
 <h2>@ViewBag.Title</h2>
 
 <div id="divPessoaController" ng-controller="PessoaController" ng-init="dataBind()">
