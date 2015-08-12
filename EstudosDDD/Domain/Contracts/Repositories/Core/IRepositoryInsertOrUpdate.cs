@@ -2,9 +2,9 @@
 
 namespace EstudosDDD.Domain.Contracts.Repositories.Core
 {
-    public interface IRepositoryUpdate<TEntity, TCodigo>
+    public interface IRepositoryInsertOrUpdate<TEntity, TCodigo>
         where TEntity : Entity<TCodigo>
     {
-        void Update(TEntity t);
+        void InsertOrUpdate(TEntity t);
     }
 }

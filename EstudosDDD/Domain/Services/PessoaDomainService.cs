@@ -19,14 +19,9 @@ namespace EstudosDDD.Domain.Services
             return _repositoryPessoa.GetAll();
         }
 
-        public void Editar(PessoaEntity t)
+        public void Salvar(PessoaEntity t)
         {
-            _repositoryPessoa.Update(t);
-        }
-
-        public int Inserir(PessoaEntity t)
-        {
-            return _repositoryPessoa.Add(t);
+            _repositoryPessoa.InsertOrUpdate(t);
         }
     }
 }

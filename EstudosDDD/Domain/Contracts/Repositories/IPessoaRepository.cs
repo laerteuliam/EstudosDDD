@@ -4,8 +4,7 @@ using EstudosDDD.Domain.Entities;
 namespace EstudosDDD.Domain.Contracts.Repositories
 {
     public interface IPessoaRepository :
-        IRepositoryAdd<PessoaEntity, int>,
-        IRepositoryUpdate<PessoaEntity, int>,
+        IRepositoryInsertOrUpdate<PessoaEntity, int>,
         IRepositoryGetAll<PessoaEntity, int>
     {
     }

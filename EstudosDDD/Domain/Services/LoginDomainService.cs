@@ -8,11 +8,11 @@ namespace EstudosDDD.Domain.Services
     {
         private readonly ILoginRepository _repositoryLogin;
 
-        public bool Logar(LoginEntity l)
-        {
-            LoginEntity login = null;
-            login = _repositoryLogin.GetByLoginSenha(l.Login, l.Senha);
-            return (login != null);
-        }
+        //public bool Logar(LoginEntity l)
+        //{
+        //    LoginEntity login = null;
+        //    login = _repositoryLogin.GetByLoginSenha(l.Login, l.Senha);
+        //    return (login != null);
+        //}
     }
 }

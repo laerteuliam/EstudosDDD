@@ -22,10 +22,7 @@ namespace EstudosDDD.Application.Services
         public void Salvar(PessoaDto pessoaDto)
         {
             Begin();
-            if(pessoaDto.Codigo>0)
-                _pessoaDomainService.Editar(pessoaDto.ToEntity());
-            else
-                _pessoaDomainService.Inserir(pessoaDto.ToEntity());
+            _pessoaDomainService.Salvar(pessoaDto.ToEntity());
             SaveChanges();
         }
 

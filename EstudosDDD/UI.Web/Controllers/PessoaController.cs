@@ -27,6 +27,7 @@ namespace EstudosDDD.UI.Web.Controllers
         public void Salvar(IndexModel model)
         {
             model.DataNascimento = DateTime.Now;
+            model.CodigoLogin = 7;
             _pessoaApplicationService.Salvar(model.ToDto());
         }
 

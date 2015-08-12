@@ -22,21 +22,13 @@ namespace EstudosDDD.Data.Repositories
             return _context.PessoaEntities.ToList();
         }
 
-        public int Add(PessoaEntity entity)
+        public void InsertOrUpdate(PessoaEntity t)
         {
-            _context.PessoaEntities.Add(entity);
-            return _context.SaveChanges();
-        }
-
-        public void Update(PessoaEntity t)
-        {
-            var entity = _context.PessoaEntities.Find(t.Codigo);
-            _context.Entry(entity).State = EntityState.Modified;
-
+            var entity = _context.PessoaEntities.Find(t.Codigo) ?? t;
+            _context.Entry(entity).State = (t.Codigo>0)?EntityState.Modified : EntityState.Added;
             entity.Nome = t.Nome;
             entity.SobreNome = t.SobreNome;
             entity.DataNascimento = t.DataNascimento;
-
             _context.SaveChanges();
         }
     }

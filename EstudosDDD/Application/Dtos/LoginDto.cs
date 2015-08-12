@@ -1,8 +1,9 @@
-﻿namespace EstudosDDD.Application.Dtos
+﻿using EstudosDDD.Application.Dtos.Core;
+
+namespace EstudosDDD.Application.Dtos
 {
-    public sealed class LoginDto
+    public sealed class LoginDto : Dto<int>
     {
-        public int Codigo { get; set; }
         public string Login { get; set; }
         public string Senha { get; set; }
     }

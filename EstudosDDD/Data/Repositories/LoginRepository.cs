@@ -14,16 +14,5 @@ namespace EstudosDDD.Data.Repositories
         {
             _context = context;
         }
-
-        public int Add(LoginEntity entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        LoginEntity ILoginRepository.GetByLoginSenha(string login, string senha)
-        {
-            LoginEntity ret = _context.LoginEntities.FirstOrDefault(x => x.Login == login && x.Senha == senha);
-            return ret;
-        }
     }
 }

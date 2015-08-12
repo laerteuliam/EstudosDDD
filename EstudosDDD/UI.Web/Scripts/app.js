@@ -22,6 +22,7 @@ app.controller('PessoaController', function ($scope,$http) {
         $http.post('/Pessoa/Salvar',$scope.ItemSelecionado).
         then(function (response) {
             alert('Salvo com sucesso.');
+            $scope.dataBind();
         }, function (response) {
             // called asynchronously if an error occurs
             // or server returns response with an error status.

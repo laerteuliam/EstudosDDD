@@ -46,8 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\Core\IApplicationServiceListar.cs" />
+    <Compile Include="Contracts\Core\IApplicationServiceSalvar.cs" />
     <Compile Include="Contracts\IPessoaApplicationService.cs" />
     <Compile Include="Converters\PessoaConverter.cs" />
+    <Compile Include="Dtos\Core\Dto.cs" />
     <Compile Include="Dtos\LoginDto.cs" />
     <Compile Include="Dtos\PessoaDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

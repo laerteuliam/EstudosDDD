@@ -1,10 +1,10 @@
 ﻿using System;
+using EstudosDDD.Application.Dtos.Core;
 
 namespace EstudosDDD.Application.Dtos
 {
-    public sealed class PessoaDto
+    public sealed class PessoaDto : Dto<int>
     {
-        public int Codigo { get; set; }
         public int CodigoLogin { get; set; }
         public string Nome { get; set; }
         public string SobreNome { get; set; }

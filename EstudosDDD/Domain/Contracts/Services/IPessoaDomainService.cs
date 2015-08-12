@@ -4,8 +4,7 @@ using EstudosDDD.Domain.Entities;
 namespace EstudosDDD.Domain.Contracts.Services
 {
     public interface IPessoaDomainService :
-        IDomainServiceEditar<PessoaEntity, int>,
-        IDomainServiceInserir<PessoaEntity, int>,
+        IDomainServiceSalvar<PessoaEntity, int>,
         IDomainServiceListar<PessoaEntity, int>
     {
     }
