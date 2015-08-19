@@ -1,0 +1,38 @@
+﻿<table class="table table-hover">
+    <tr>
+        <th>
+            Código
+        </th>
+        <th>
+            Nome
+        </th>
+        <th>
+            Sobrenome
+        </th>
+        <th>
+            Data Nascimento
+        </th>
+        <th></th>
+    </tr>
+
+
+    <tr ng-repeat="item in p.Items">
+        <td>
+            {{item.Codigo}}
+        </td>
+        <td>
+            {{item.Nome}}
+        </td>
+        <td>
+            {{item.SobreNome}}
+        </td>
+        <td>
+            {{item.DataNascimento}}
+        </td>
+        <td>
+            <a href ng-click="p.edit($index)" data-toggle="modal" data-target="#modalPessoa">Editar</a>
+            <a href ng-click="p.select($index)" data-toggle="modal" data-target="#modalPessoa">Detalhes</a>
+        </td>
+    </tr>
+
+</table>

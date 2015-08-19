@@ -135,7 +135,7 @@
     <Content Include="Scripts\angular-touch.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
-    <Content Include="Scripts\configs\app.js" />
+    <Content Include="Scripts\apps\app.js" />
     <Content Include="Scripts\bootstrap-alert.js" />
     <Content Include="Scripts\bootstrap-button.js" />
     <Content Include="Scripts\bootstrap-carousel.js" />
@@ -150,7 +150,14 @@
     <Content Include="Scripts\bootstrap-typeahead.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\directives\baseDirective.js" />
+    <Content Include="Scripts\directives\baseHtml\pagina-titulo.html" />
+    <Content Include="Scripts\directives\pessoaHtml\adicionar-pessoa.html" />
+    <Content Include="Scripts\directives\pessoaHtml\index-pessoa.html" />
+    <Content Include="Scripts\directives\pessoaHtml\listar-pessoas.html" />
+    <Content Include="Scripts\directives\pessoaHtml\modal-pessoa.html" />
     <Content Include="Scripts\controllers\pessoaController.js" />
+    <Content Include="Scripts\directives\pessoaDirective.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-et.js" />
@@ -978,7 +985,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Extensions\" />
-    <Folder Include="Scripts\directives\html\" />
+    <Folder Include="Scripts\modules\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Application\Application.csproj">
